@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ilw87vdygpma"]
+
+[ext_resource type="Texture2D" uid="uid://b51dyjkt1regm" path="res://assets/textures/spraycloud.png" id="1_64843"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a5ji5"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_a5ji5")
+emitting = false
+amount = 1
+texture = ExtResource("1_64843")
+lifetime = 3.0
+one_shot = true
+gravity = Vector2(0, 0)
+anim_speed_min = 0.2
+anim_speed_max = 3.0
