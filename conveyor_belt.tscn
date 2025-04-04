@@ -6,10 +6,6 @@
 [node name="ConveyorBelt" type="Node2D"]
 script = ExtResource("1_a4ohy")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.0885599, 0.0885599, 0.0885599, 1)
 position = Vector2(671, 1)
@@ -20,5 +16,3 @@ texture = ExtResource("2_r4k1w")
 position = Vector2(1333, 0)
 
 [node name="Clothes" type="Node2D" parent="."]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dci58r5agnp63"]
+[gd_scene load_steps=15 format=3 uid="uid://b4j0xitll0uj8"]
 
 [ext_resource type="Texture2D" uid="uid://rqeyoskvlll" path="res://assets/textures/clock-6.png" id="1_gy52w"]
+[ext_resource type="Script" uid="uid://bm6xm0wjxbi74" path="res://clock.gd" id="1_thogr"]
 [ext_resource type="Texture2D" uid="uid://tvshutkntcaf" path="res://assets/textures/clock-7.png" id="2_thogr"]
 [ext_resource type="Texture2D" uid="uid://cahyw5446o0td" path="res://assets/textures/clock-8.png" id="3_x6sbk"]
 [ext_resource type="Texture2D" uid="uid://cdmod6jaj5rdy" path="res://assets/textures/clock-9.png" id="4_7nqlw"]
@@ -58,8 +59,11 @@ animations = [{
 }]
 
 [node name="Clock" type="Node2D"]
+script = ExtResource("1_thogr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gy52w")
+frame = 10
+frame_progress = 0.971658
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

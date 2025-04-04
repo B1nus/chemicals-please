@@ -1,10 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=6 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://conveyor_belt.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://bp56xlbjtj0i1" path="res://spray_bottle.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c0pu61plgeknt" path="res://spray_bottle.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://clock.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://paper_scene.tscn" id="5_lquwl"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_h2yge")
 day_time = 10.0
 
@@ -19,4 +27,15 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Clock" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(937, 255)
+
+[node name="PaperScene" parent="." instance=ExtResource("5_lquwl")]
+layout_mode = 1
+
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0pu61plgeknt"]
 
-[ext_resource type="Script" path="res://spray_bottle.gd" id="1_eg0il"]
+[ext_resource type="Script" uid="uid://chypjcr7jrfho" path="res://spray_bottle.gd" id="1_eg0il"]
 [ext_resource type="Texture2D" uid="uid://c3dhnlxo1n628" path="res://assets/textures/spray_bottle-1.png" id="3_k0510"]
 [ext_resource type="Texture2D" uid="uid://ijd14e2n50au" path="res://assets/textures/spray_bottle-spraying.png" id="4_5pcwt"]
 
