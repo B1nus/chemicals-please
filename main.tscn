@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=3 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://conveyor_belt.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bp56xlbjtj0i1" path="res://spray_bottle.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(-107, 516)
+
+[node name="SprayBottle" parent="." instance=ExtResource("2_0xm2m")]

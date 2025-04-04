@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp56xlbjtj0i1"]
+
+[ext_resource type="Script" uid="uid://chypjcr7jrfho" path="res://spray_bottle.gd" id="1_eg0il"]
+[ext_resource type="Texture2D" uid="uid://bx80i8qwc1kfh" path="res://icon.svg" id="1_pcf6y"]
+
+[node name="SprayBottle" type="Node2D"]
+script = ExtResource("1_eg0il")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(39, -1)
+rotation = -0.285286
+scale = Vector2(0.351562, 0.492188)
+texture = ExtResource("1_pcf6y")
