@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="chemicals-please"
+run/main_scene="uid://5eypd3miuis1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
