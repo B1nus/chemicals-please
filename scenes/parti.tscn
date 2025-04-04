@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bv85vgoi1jvf8"]
+
+[node name="Parti" type="GPUParticles2D"]

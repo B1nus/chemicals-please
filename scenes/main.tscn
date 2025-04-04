@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://5eypd3miuis1"]
 
-[ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://conveyor_belt.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://c0pu61plgeknt" path="res://spray_bottle.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://clock.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://paper_scene.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c0pu61plgeknt" path="res://scenes/spray_bottle.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
 
 [node name="Main" type="Control"]
 layout_mode = 3

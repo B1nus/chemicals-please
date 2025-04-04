@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://uafvahwurht6"]
+
+[ext_resource type="Script" uid="uid://by77b357y70h8" path="res://scripts/shirt.gd" id="1_xh6vb"]
+[ext_resource type="Texture2D" uid="uid://sltbah6fxobu" path="res://assets/textures/tshirt_yellow.png" id="2_qoc0s"]
+
+[node name="Clothes" type="Node2D"]
+script = ExtResource("1_xh6vb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qoc0s")

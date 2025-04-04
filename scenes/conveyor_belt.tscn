@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qoh5gl78brur"]
 
-[ext_resource type="Script" uid="uid://bk2r37njd7vbi" path="res://conveyor_belt.gd" id="1_a4ohy"]
+[ext_resource type="Script" uid="uid://bk2r37njd7vbi" path="res://scripts/conveyor_belt.gd" id="1_a4ohy"]
 [ext_resource type="Texture2D" uid="uid://bx80i8qwc1kfh" path="res://icon.svg" id="2_r4k1w"]
 
 [node name="ConveyorBelt" type="Node2D"]
