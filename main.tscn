@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=4 format=3 uid="uid://5eypd3miuis1"]
 
+[ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://conveyor_belt.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bp56xlbjtj0i1" path="res://spray_bottle.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+day_time = 10.0
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(-107, 516)
+acceleration_scale = 50.0
 
 [node name="SprayBottle" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="DayTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
