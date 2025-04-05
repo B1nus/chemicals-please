@@ -1,0 +1,27 @@
+INTRO:
+"Hello new worker C7339 at the factory of Ql Clothes! You have only one task to do, paint the t-shirts with the spray. And don't ask questions!"
+
+
+RESULTS:
+NUDE:
+"Excessive nudity in the city!"
+"Police arrested hundreds of people who were wandering around the city without clothes, as there were no clothes in the shops in the morning and they already threw out yesterday's set."
+
+SUPER BAD:
+"Aliens are walking among us!"
+"Humanity met with aliens, right here in the city! The tentacled horrifying beings are seemingly all very fond of Ql Clothes' products."
+
+
+BAD:
+"Tenctacles instead of arms!"
+"Some people grew tentacles instead of arms. Police suspects Ql Clothes factory, they are denying any wrongdoing!"
+
+
+ALMOST GOOD:
+"Disease sighted!"
+"After we defeated Covid a new disease is spreading! Ugly rashes can appear on any body parts. Buy Ql Clothes, it will hide the rashes!"
+
+
+GOOD:
+"Newspaper is out of business"
+"As we have nothing to report and life is super boring we decided to close down our newspaper."
