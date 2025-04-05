@@ -1,14 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://ujadrqvy3bcf"]
+[gd_scene load_steps=5 format=3 uid="uid://ciejhy6in2tk"]
 
-[ext_resource type="Texture2D" uid="uid://bx80i8qwc1kfh" path="res://icon.svg" id="1_neq0i"]
-[ext_resource type="AudioStream" uid="uid://bjjbt6n8sp1oj" path="res://assets/audio/boss-talk.ogg" id="2_jncid"]
+[ext_resource type="Texture2D" uid="uid://c85lturoy0c8v" path="res://assets/textures/boss.png" id="1_jncid"]
+[ext_resource type="AudioStream" uid="uid://cl0u6bnqcwhkc" path="res://assets/audio/boss-talk.ogg" id="2_jncid"]
+[ext_resource type="Texture2D" uid="uid://c6dhipf0erw4e" path="res://assets/textures/speechbubble.png" id="3_qnbj4"]
+[ext_resource type="FontFile" uid="uid://bhww5xieogvy" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="4_qnbj4"]
 
 [node name="Boss" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_neq0i")
+texture = ExtResource("1_jncid")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_jncid")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 136.0
+offset_top = 29.0
+offset_right = 200.0
+offset_bottom = 93.0
+texture = ExtResource("3_qnbj4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect2"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 48.0
+theme_override_fonts/normal_font = ExtResource("4_qnbj4")
+theme_override_font_sizes/normal_font_size = 11
+text = "Get to work!"

@@ -12,7 +12,7 @@ extends Control
 func _ready() -> void:
 	paper_scene.restart.connect(start_day)
 	paper_scene.reset()
-	start_day()
+	
 
 
 func _process(delta: float) -> void:

@@ -2,7 +2,7 @@ extends Node
 
 
 var hovering_shelf: bool = false
-var chemical: Chemical = Chemical.PFAS
+var chemical = null
 var did_nothing: bool = true
 var bad_value: float = 0.0
 

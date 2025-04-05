@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=9 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://beijt0bplkqlk" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -50,6 +51,9 @@ layout_mode = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_o6xl0")
 playback_type = 2
+
+[node name="Boss" parent="." instance=ExtResource("8_tipki")]
+position = Vector2(358, 32)
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
