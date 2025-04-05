@@ -18,25 +18,28 @@ autoplay = true
 parameters/looping = true
 
 [node name="Belt" type="Sprite2D" parent="."]
+texture_filter = 1
 texture_repeat = 2
-position = Vector2(599, 4)
+position = Vector2(285, 32)
 texture = ExtResource("3_it644")
 region_enabled = true
-region_rect = Rect2(0, 0, 1200, 50)
+region_rect = Rect2(0, 0, 570, 50)
 
 [node name="Bottom" type="Sprite2D" parent="."]
+texture_filter = 1
 texture_repeat = 2
-position = Vector2(599, 66)
+position = Vector2(285, 95)
 texture = ExtResource("4_03uyg")
 region_enabled = true
-region_rect = Rect2(0, 0, 1200, 94)
+region_rect = Rect2(0, 16, 570, 78)
 
 [node name="Top" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(599, -28)
+position = Vector2(285, 0)
 texture = ExtResource("4_it644")
 region_enabled = true
-region_rect = Rect2(0, 0, 1200, 14)
+region_rect = Rect2(0, 0, 570, 14)
 
 [node name="Clothes" type="Node2D" parent="."]
+position = Vector2(-38, 25)

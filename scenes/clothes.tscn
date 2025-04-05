@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://uafvahwurht6"]
+[gd_scene load_steps=4 format=3 uid="uid://uafvahwurht6"]
 
 [ext_resource type="Script" uid="uid://by77b357y70h8" path="res://scripts/shirt.gd" id="1_xh6vb"]
 [ext_resource type="Texture2D" uid="uid://sltbah6fxobu" path="res://assets/textures/tshirt_yellow.png" id="2_qoc0s"]
 
+[sub_resource type="Curve" id="Curve_xh6vb"]
+_limits = [0.0, 0.5, 0.0, 100.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.494382), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Clothes" type="Node2D"]
 script = ExtResource("1_xh6vb")
+curve = SubResource("Curve_xh6vb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qoc0s")

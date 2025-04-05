@@ -13,9 +13,9 @@ const bad_value_map: Dictionary[Chemical, float] = {
 }
 
 
-const modulate_map: Dictionary[Chemical, Color] = {
-	Chemical.PFAS: Color.WHITE,
-	Chemical.BEEWAX: Color.INDIAN_RED,
+const color_shift_map: Dictionary[Chemical, Vector3] = {
+	Chemical.PFAS: Vector3(0.1,0,0),
+	Chemical.BEEWAX: Vector3(0,0.05,0.05),
 }
 
 

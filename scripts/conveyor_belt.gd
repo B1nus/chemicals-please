@@ -49,3 +49,10 @@ func speed_up() -> void:
 
 func slow_down() -> void:
 	acceleration = -1.0
+
+
+func clear_clothes() -> void:
+	for child in clothes_parent.get_children():
+		child.clean()
+		if child.global_position.x > 250:
+			child.queue_free()

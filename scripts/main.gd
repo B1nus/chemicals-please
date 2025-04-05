@@ -24,6 +24,7 @@ func start_day() -> void:
 	paper_scene.fade_out()
 	conveyor.speed_up()
 	day_timer.start(day_time)
+	conveyor.clear_clothes()
 	Global.bad_value = 0.0
 	Global.did_nothing = true
 

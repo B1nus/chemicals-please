@@ -5,14 +5,12 @@ extends Node2D
 @onready var cloud_spawner = $CloudSpawner
 @export var chemical: Global.Chemical
 @onready var shelf_position = global_position
-const click_distance: float = 40.0
+const click_distance: float = 30.0
 @export var offset: Vector2 = Vector2(5, 5)
 
 
 func _process(delta: float) -> void:
 	$AnimatedSprite2D.use_parent_material = false
-	$AnimatedSprite2D.modulate = Global.modulate_map[chemical]
-	modulate = Global.modulate_map[chemical]
 	if Global.chemical == chemical:
 		z_index = 1
 		global_position = get_global_mouse_position() + offset

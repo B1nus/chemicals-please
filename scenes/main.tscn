@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=8 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://dqecdmr7fdnsi" path="res://assets/textures/background.png" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
-[ext_resource type="AudioStream" uid="uid://beijt0bplkqlk" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://1o3jrhbnxlmw" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
 
 [node name="Main" type="Control"]
@@ -18,11 +19,15 @@ mouse_filter = 2
 script = ExtResource("1_h2yge")
 day_time = 10.0
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(285, 160)
+texture = ExtResource("2_tefeu")
+
 [node name="Shelf" parent="." instance=ExtResource("6_tefeu")]
-position = Vector2(153, 131)
+position = Vector2(108, 166)
 
 [node name="ConveyorBelt" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(3, 229)
+position = Vector2(0, 200)
 acceleration_scale = 50.0
 
 [node name="DayTimer" type="Timer" parent="."]
@@ -35,7 +40,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Clock" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(503, 54)
+position = Vector2(507, 49)
 
 [node name="PaperScene" parent="." instance=ExtResource("5_lquwl")]
 visible = false

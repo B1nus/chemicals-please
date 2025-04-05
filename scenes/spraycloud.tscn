@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ilw87vdygpma"]
 
-[ext_resource type="Script" path="res://scripts/spraycloud.gd" id="1_0h03n"]
+[ext_resource type="Script" uid="uid://8g8kagf2jdco" path="res://scripts/spraycloud.gd" id="1_0h03n"]
 [ext_resource type="Texture2D" uid="uid://b51dyjkt1regm" path="res://assets/textures/spraycloud.png" id="1_64843"]
-[ext_resource type="AudioStream" uid="uid://cuc2d1epd4gqh" path="res://assets/audio/spray.ogg" id="3_vclbi"]
+[ext_resource type="AudioStream" uid="uid://cqhduq0kjodvj" path="res://assets/audio/spray.ogg" id="3_vclbi"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a5ji5"]
 particles_animation = true

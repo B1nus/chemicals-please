@@ -23,5 +23,5 @@ func fade() -> void:
 	show()
 
 
-func _on_button_pressed() -> void:
+func _on_texture_button_pressed() -> void:
 	restart.emit()
