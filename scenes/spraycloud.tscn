@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ilw87vdygpma"]
+[gd_scene load_steps=5 format=3 uid="uid://ilw87vdygpma"]
 
-[ext_resource type="Script" uid="uid://8g8kagf2jdco" path="res://scripts/spraycloud.gd" id="1_0h03n"]
+[ext_resource type="Script" path="res://scripts/spraycloud.gd" id="1_0h03n"]
 [ext_resource type="Texture2D" uid="uid://b51dyjkt1regm" path="res://assets/textures/spraycloud.png" id="1_64843"]
+[ext_resource type="AudioStream" uid="uid://cuc2d1epd4gqh" path="res://assets/audio/spray.ogg" id="3_vclbi"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a5ji5"]
 particles_animation = true
@@ -34,5 +35,10 @@ anim_speed_min = 0.8
 anim_speed_max = 1.2
 anim_offset_min = 0.1
 anim_offset_max = 0.2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vclbi")
+volume_db = -3.962
+autoplay = true
 
 [connection signal="finished" from="CPUParticles2D" to="." method="_on_cpu_particles_2d_finished"]
