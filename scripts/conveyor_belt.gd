@@ -2,14 +2,18 @@ class_name Conveyor
 extends Node2D
 
 
-var clothes_scene: PackedScene = load("res://clothes.tscn")
-@export var clothes_gap = 100.0
+var clothes_scene: PackedScene = load("res://scenes/clothes.tscn")
+@export var clothes_gap = 200.0
 @onready var clothes_parent = $Clothes
 @onready var end_point = $End
 @export var speed = 100.0
 @onready var velocity = 0.0
 @export var acceleration_scale = 100.0
 var acceleration = 0.0
+const error_margin: int = 10
+
+
+signal chemicals
 
 
 func _ready() -> void:
@@ -20,6 +24,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	$Belt.region_rect.position.x -= velocity * delta
 	velocity += acceleration_scale * acceleration * delta
 	velocity = clampf(velocity, 0.0, speed)
 	var min_x = INF

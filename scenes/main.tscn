@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://c0pu61plgeknt" path="res://scenes/spray_bottle.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -13,14 +13,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_h2yge")
 day_time = 10.0
 
-[node name="ConveyorBelt" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(-107, 516)
-acceleration_scale = 50.0
+[node name="Shelf" parent="." instance=ExtResource("6_tefeu")]
+position = Vector2(153, 131)
 
-[node name="SprayBottle" parent="." instance=ExtResource("2_0xm2m")]
+[node name="ConveyorBelt" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(3, 229)
+acceleration_scale = 50.0
 
 [node name="DayTimer" type="Timer" parent="."]
 wait_time = 30.0
@@ -32,9 +34,11 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Clock" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(937, 255)
+position = Vector2(482, 89)
 
 [node name="PaperScene" parent="." instance=ExtResource("5_lquwl")]
+visible = false
+z_index = 1
 layout_mode = 1
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]

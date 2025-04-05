@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ilw87vdygpma"]
+[gd_scene load_steps=4 format=3 uid="uid://ilw87vdygpma"]
 
+[ext_resource type="Script" uid="uid://8g8kagf2jdco" path="res://scripts/spraycloud.gd" id="1_0h03n"]
 [ext_resource type="Texture2D" uid="uid://b51dyjkt1regm" path="res://assets/textures/spraycloud.png" id="1_64843"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a5ji5"]
@@ -8,22 +9,30 @@ particles_anim_h_frames = 4
 particles_anim_v_frames = 4
 particles_anim_loop = false
 
-[node name="Node2D" type="Node2D"]
+[node name="SprayCloud" type="Node2D"]
+script = ExtResource("1_0h03n")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
 material = SubResource("CanvasItemMaterial_a5ji5")
+emitting = false
 amount = 32
 texture = ExtResource("1_64843")
+lifetime = 0.5
+one_shot = true
 explosiveness = 1.0
 randomness = 0.1
 lifetime_randomness = 0.1
 fixed_fps = 16
+direction = Vector2(-1, 0)
 spread = 25.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 20.0
-initial_velocity_max = 60.0
+initial_velocity_min = 40.0
+initial_velocity_max = 250.0
 damping_max = 0.1
 anim_speed_min = 0.8
 anim_speed_max = 1.2
 anim_offset_min = 0.1
 anim_offset_max = 0.2
+
+[connection signal="finished" from="CPUParticles2D" to="." method="_on_cpu_particles_2d_finished"]
