@@ -34,7 +34,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Clock" parent="." instance=ExtResource("4_1bvp3")]
-position = Vector2(482, 89)
+position = Vector2(503, 54)
 
 [node name="PaperScene" parent="." instance=ExtResource("5_lquwl")]
 visible = false
