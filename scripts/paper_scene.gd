@@ -57,6 +57,7 @@ func fade() -> void:
 func _process(delta: float) -> void:
 	if on:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	$VBoxContainer/TextureButton.disabled = not on
 
 
 func _on_texture_button_pressed() -> void:

@@ -20,6 +20,7 @@ func _ready() -> void:
 
 
 func clean() -> void:
+	color_shift = Vector3(0,0,0)
 	modulate = Color.WHITE
 
 

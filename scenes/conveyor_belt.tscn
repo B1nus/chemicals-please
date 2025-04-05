@@ -10,7 +10,7 @@
 script = ExtResource("1_a4ohy")
 
 [node name="End" type="Marker2D" parent="."]
-position = Vector2(1333, 0)
+position = Vector2(594, 35)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4dsgs")

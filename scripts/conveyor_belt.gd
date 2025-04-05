@@ -54,5 +54,5 @@ func slow_down() -> void:
 func clear_clothes() -> void:
 	for child in clothes_parent.get_children():
 		child.clean()
-		if child.global_position.x > 150:
+		if child.global_position.x > clothes_gap:
 			child.queue_free()

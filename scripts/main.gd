@@ -40,6 +40,7 @@ func _on_day_timer_timeout() -> void:
 
 func _on_wait_timer_timeout() -> void:
 	chemical = Global.chemical
+	$"shift-end".play()
 	paper_scene.fade()
 
 
