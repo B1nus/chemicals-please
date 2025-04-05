@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0pu61plgeknt"]
+[gd_scene load_steps=5 format=3 uid="uid://c0pu61plgeknt"]
 
 [ext_resource type="Shader" uid="uid://bkia0f7aprcom" path="res://scripts/outline.gdshader" id="1_8tg7d"]
 [ext_resource type="Script" uid="uid://chypjcr7jrfho" path="res://scripts/spray_bottle.gd" id="1_eg0il"]
-[ext_resource type="Texture2D" uid="uid://c3dhnlxo1n628" path="res://assets/textures/spray_bottle-1.png" id="3_k0510"]
-[ext_resource type="Texture2D" uid="uid://ijd14e2n50au" path="res://assets/textures/spray_bottle-spraying.png" id="4_5pcwt"]
+[ext_resource type="Texture2D" uid="uid://bpw6p3thn6fu5" path="res://assets/textures/spraybottle_orange.png" id="3_yk2qn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yk2qn"]
 shader = ExtResource("1_8tg7d")
@@ -13,29 +12,15 @@ shader_parameter/pattern = 1
 shader_parameter/inside = false
 shader_parameter/add_margins = true
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wh6ui"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_k0510")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_5pcwt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="SprayBottle" type="Node2D"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_yk2qn")
 script = ExtResource("1_eg0il")
+idle_image = ExtResource("3_yk2qn")
+spray_image = ExtResource("3_yk2qn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 use_parent_material = true
-sprite_frames = SubResource("SpriteFrames_wh6ui")
-frame_progress = 0.62678
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

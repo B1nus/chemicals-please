@@ -1,14 +1,50 @@
-[gd_scene load_steps=10 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=13 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://dqecdmr7fdnsi" path="res://assets/textures/background.png" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
-[ext_resource type="AudioStream" uid="uid://beijt0bplkqlk" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://1o3jrhbnxlmw" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://ujadrqvy3bcf" path="res://scenes/boss.tscn" id="8_tipki"]
-[ext_resource type="AudioStream" uid="uid://cpe8ax4kps5wg" path="res://assets/audio/music.mp3" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
+[ext_resource type="AudioStream" uid="uid://b7pie1ba2kxsl" path="res://assets/audio/music.mp3" id="9_85g3d"]
+
+[sub_resource type="Animation" id="Animation_85g3d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boss:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(574, 88)]
+}
+
+[sub_resource type="Animation" id="Animation_tipki"]
+resource_name = "boss"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boss:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(710, 150), Vector2(450, 150)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_choun"]
+_data = {
+&"RESET": SubResource("Animation_85g3d"),
+&"boss": SubResource("Animation_tipki")
+}
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -54,7 +90,12 @@ stream = ExtResource("6_o6xl0")
 playback_type = 2
 
 [node name="Boss" parent="." instance=ExtResource("8_tipki")]
-position = Vector2(358, 32)
+position = Vector2(574, 88)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_choun")
+}
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_85g3d")
@@ -64,3 +105,4 @@ parameters/looping = true
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

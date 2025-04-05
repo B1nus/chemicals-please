@@ -17,7 +17,7 @@ signal chemicals
 
 
 func _ready() -> void:
-	for i in range(2):
+	for i in range(1):
 		var clothes = clothes_scene.instantiate()
 		clothes.position.x += clothes_gap * i
 		clothes_parent.add_child(clothes)
@@ -54,5 +54,5 @@ func slow_down() -> void:
 func clear_clothes() -> void:
 	for child in clothes_parent.get_children():
 		child.clean()
-		if child.global_position.x > 250:
+		if child.global_position.x > 150:
 			child.queue_free()

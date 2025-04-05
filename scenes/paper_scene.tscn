@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://esp3sh2kg77s"]
+[gd_scene load_steps=7 format=3 uid="uid://esp3sh2kg77s"]
 
 [ext_resource type="Script" uid="uid://fynfvi5mmk8t" path="res://scripts/paper_scene.gd" id="1_1g4or"]
+[ext_resource type="FontFile" uid="uid://bhww5xieogvy" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="2_rpnwd"]
 [ext_resource type="PackedScene" uid="uid://c78dbrwfc2igx" path="res://scenes/button.tscn" id="2_uuq48"]
 
 [sub_resource type="Animation" id="Animation_1g4or"]
@@ -20,7 +21,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer/TextureButton:modulate")
+tracks/1/path = NodePath("VBoxContainer:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -47,7 +48,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer/TextureButton:modulate")
+tracks/1/path = NodePath("VBoxContainer:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -74,12 +75,41 @@ color = Color(0, 0, 0, 0)
 script = ExtResource("1_1g4or")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+modulate = Color(0, 0, 0, 0)
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -65.0
+offset_right = 100.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Header" type="RichTextLabel" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_rpnwd")
+theme_override_font_sizes/normal_font_size = 22
+text = "Hello"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Content" type="RichTextLabel" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_rpnwd")
+theme_override_font_sizes/normal_font_size = 11
+text = "Hello"
+fit_content = true
 
 [node name="TextureButton" parent="VBoxContainer" instance=ExtResource("2_uuq48")]
-modulate = Color(0, 0, 0, 0)
+texture_filter = 1
 layout_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

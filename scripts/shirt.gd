@@ -24,7 +24,7 @@ func clean() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("click") and (get_global_mouse_position() + click_offset).distance_to(global_position) < click_distance:
+	if Input.is_action_just_pressed("click") and (get_global_mouse_position() + click_offset).distance_to(global_position) < click_distance and Global.chemical != null:
 		Global.bad_value += Global.bad_value_map[Global.chemical]
 		Global.did_nothing = false
 		color_shift += Global.color_shift_map[Global.chemical]
