@@ -1,5 +1,5 @@
 INTRO:
-"Hello new worker C7339 at the factory of Ql Clothes! You have only one task to do, paint the t-shirts with the spray. And don't ask questions!"
+"Hello new worker C7339 at the factory of Ql Clothes! You have only one task to do, paint the t-shirts with the spray. And don't ask questions! Now get to work!"
 
 
 RESULTS:

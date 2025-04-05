@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://beijt0bplkqlk" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://ujadrqvy3bcf" path="res://scenes/boss.tscn" id="8_tipki"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
