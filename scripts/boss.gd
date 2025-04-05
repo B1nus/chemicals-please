@@ -29,7 +29,7 @@ func next_text() -> void:
 	if text_id < texts.size():
 		$TextureRect2.show()
 		$RichTextLabel.show()
-		$AudioStreamPlayer.play()
+		$"boss-talk".play()
 	text_chars = 0
 	text_id += 1
 	if text_id >= texts.size():

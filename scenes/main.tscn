@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dqecdmr7fdnsi" path="res://assets/textures/background.png" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
-[ext_resource type="AudioStream" uid="uid://1o3jrhbnxlmw" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://dp1mv6jygfxd" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
-[ext_resource type="AudioStream" uid="uid://b7pie1ba2kxsl" path="res://assets/audio/music.mp3" id="9_85g3d"]
+[ext_resource type="AudioStream" uid="uid://dd6tv7g68kqvt" path="res://assets/audio/music.mp3" id="9_85g3d"]
 
 [sub_resource type="Animation" id="Animation_85g3d"]
 length = 0.001

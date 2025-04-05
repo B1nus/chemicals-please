@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ciejhy6in2tk"]
+[gd_scene load_steps=7 format=3 uid="uid://ciejhy6in2tk"]
 
-[ext_resource type="Texture2D" uid="uid://c85lturoy0c8v" path="res://assets/textures/boss.png" id="1_jncid"]
+[ext_resource type="Texture2D" uid="uid://30riguxe2sip" path="res://assets/textures/boss.png" id="1_jncid"]
 [ext_resource type="Script" uid="uid://c6sbvbmk1dj43" path="res://scripts/boss.gd" id="1_r3bxh"]
-[ext_resource type="AudioStream" uid="uid://cl0u6bnqcwhkc" path="res://assets/audio/boss-talk.ogg" id="2_jncid"]
+[ext_resource type="AudioStream" uid="uid://bd8u0pkxr1dks" path="res://assets/audio/boss-talk.ogg" id="2_jncid"]
 [ext_resource type="Texture2D" uid="uid://c6dhipf0erw4e" path="res://assets/textures/speechbubble.png" id="3_qnbj4"]
-[ext_resource type="FontFile" uid="uid://bhww5xieogvy" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="4_qnbj4"]
+[ext_resource type="FontFile" uid="uid://btkpgj3ns8iu8" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="4_qnbj4"]
+[ext_resource type="AudioStream" uid="uid://dmh3jgrl4i1kp" path="res://assets/audio/walk.ogg" id="6_wqpjq"]
 
 [node name="Boss" type="Node2D"]
 script = ExtResource("1_r3bxh")
@@ -16,7 +17,7 @@ offset_right = 119.0
 offset_bottom = 173.0
 texture = ExtResource("1_jncid")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="boss-talk" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_jncid")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -56,6 +57,8 @@ theme_override_fonts/normal_font = ExtResource("4_qnbj4")
 theme_override_font_sizes/normal_font_size = 11
 text = "Get to work!"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_jncid")
-volume_db = 7.495
+[node name="boss-walk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_wqpjq")
+volume_db = -11.886
+autoplay = true
+panning_strength = 2.0
