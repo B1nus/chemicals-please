@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://di5x37u4el5kf"]
+
+[ext_resource type="Texture2D" uid="uid://c6dhipf0erw4e" path="res://assets/textures/speechbubble.png" id="1_8etam"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8etam")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 55.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 10
+text = "Text"
+horizontal_alignment = 1
+vertical_alignment = 1
