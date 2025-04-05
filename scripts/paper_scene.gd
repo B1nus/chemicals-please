@@ -55,6 +55,7 @@ func fade() -> void:
 
 
 func _process(delta: float) -> void:
+	Global.paper_scene_on = on
 	if on:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$VBoxContainer/TextureButton.disabled = not on

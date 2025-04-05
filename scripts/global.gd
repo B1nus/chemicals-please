@@ -5,6 +5,7 @@ var hovering_shelf: bool = false
 var chemical = null
 var did_nothing: bool = true
 var bad_value: float = 0.0
+var paper_scene_on: bool = false
 
 
 const bad_value_map: Dictionary[Chemical, float] = {

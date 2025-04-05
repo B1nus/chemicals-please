@@ -8,7 +8,6 @@ extends Control
 @onready var day_timer = $DayTimer
 @onready var wait_timer = $WaitTimer
 @export var day_time: float = 60.0
-var chemical = Global.chemical
 
 
 func _ready() -> void:
@@ -24,7 +23,6 @@ func _process(delta: float) -> void:
 
 
 func start_day() -> void:
-	Global.chemical = chemical
 	paper_scene.fade_out()
 	conveyor.speed_up()
 	day_timer.start(day_time)
@@ -39,7 +37,6 @@ func _on_day_timer_timeout() -> void:
 
 
 func _on_wait_timer_timeout() -> void:
-	chemical = Global.chemical
 	$"shift-end".play()
 	paper_scene.fade()
 

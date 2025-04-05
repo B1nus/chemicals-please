@@ -27,5 +27,5 @@ func _process(delta: float) -> void:
 		global_position = shelf_position
 		if global_position.distance_to(get_global_mouse_position()) < click_distance:
 			$Sprite2D.use_parent_material = true
-			if Input.is_action_just_pressed("click"):
+			if Input.is_action_just_pressed("click") and not Global.paper_scene_on:
 				Global.chemical = chemical

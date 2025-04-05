@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dqecdmr7fdnsi" path="res://assets/textures/background.png" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b4j0xitll0uj8" path="res://scenes/clock.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://esp3sh2kg77s" path="res://scenes/paper_scene.tscn" id="5_lquwl"]
-[ext_resource type="AudioStream" uid="uid://dp1mv6jygfxd" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://1o3jrhbnxlmw" path="res://assets/audio/shift-end.ogg" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
-[ext_resource type="AudioStream" uid="uid://dd6tv7g68kqvt" path="res://assets/audio/music.mp3" id="9_85g3d"]
+[ext_resource type="AudioStream" uid="uid://b7pie1ba2kxsl" path="res://assets/audio/music.mp3" id="9_85g3d"]
 
 [sub_resource type="Animation" id="Animation_85g3d"]
 length = 0.001
@@ -27,6 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_tipki"]
 resource_name = "boss"
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -34,7 +35,7 @@ tracks/0/path = NodePath("Boss:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 3.93333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(710, 150), Vector2(450, 150)]
@@ -55,7 +56,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_h2yge")
-day_time = 10.0
+day_time = 30.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(285, 160)
@@ -71,7 +72,6 @@ acceleration_scale = 50.0
 [node name="DayTimer" type="Timer" parent="."]
 wait_time = 30.0
 one_shot = true
-autostart = true
 
 [node name="WaitTimer" type="Timer" parent="."]
 wait_time = 2.0
@@ -99,10 +99,11 @@ libraries = {
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_85g3d")
-volume_db = -8.0
+volume_db = -10.0
 autoplay = true
 parameters/looping = true
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
