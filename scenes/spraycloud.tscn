@@ -12,11 +12,18 @@ particles_anim_loop = false
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_a5ji5")
-emitting = false
-amount = 1
+amount = 32
 texture = ExtResource("1_64843")
-lifetime = 3.0
-one_shot = true
+explosiveness = 1.0
+randomness = 0.1
+lifetime_randomness = 0.1
+fixed_fps = 16
+spread = 25.0
 gravity = Vector2(0, 0)
-anim_speed_min = 0.2
-anim_speed_max = 3.0
+initial_velocity_min = 20.0
+initial_velocity_max = 60.0
+damping_max = 0.1
+anim_speed_min = 0.8
+anim_speed_max = 1.2
+anim_offset_min = 0.1
+anim_offset_max = 0.2
