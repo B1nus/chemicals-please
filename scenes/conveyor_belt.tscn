@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://qoh5gl78brur"]
+[gd_scene load_steps=4 format=3 uid="uid://qoh5gl78brur"]
 
 [ext_resource type="Script" uid="uid://bk2r37njd7vbi" path="res://scripts/conveyor_belt.gd" id="1_a4ohy"]
 [ext_resource type="Texture2D" uid="uid://bx80i8qwc1kfh" path="res://icon.svg" id="2_r4k1w"]
+[ext_resource type="AudioStream" uid="uid://24ck8hpu6i1d" path="res://assets/audio/conveyor.ogg" id="3_4dsgs"]
 
 [node name="ConveyorBelt" type="Node2D"]
 script = ExtResource("1_a4ohy")
@@ -16,3 +17,8 @@ texture = ExtResource("2_r4k1w")
 position = Vector2(1333, 0)
 
 [node name="Clothes" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4dsgs")
+autoplay = true
+parameters/looping = true
