@@ -10,7 +10,7 @@ var images: Array[Texture] = [
 	load("res://assets/textures/newspaper_happy.png"),
 	load("res://assets/textures/newspaper_disease.png"),
 	load("res://assets/textures/newspaper_tentaclearm.png"),
-	load("res://assets/textures/newspaper_disease.png"),
+	load("res://assets/textures/newspaper_tentaclemonster.png"),
 ]
 const nothing_text = [
 	"Excessive nudity in the city!",
