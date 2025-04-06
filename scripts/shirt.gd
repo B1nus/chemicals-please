@@ -26,8 +26,10 @@ func clean() -> void:
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("click") and (get_global_mouse_position() + click_offset).distance_to(global_position) < click_distance and Global.chemical != null:
+	if Input.is_action_just_pressed("click") and (get_global_mouse_position() + click_offset).distance_to(global_position) < click_distance and Global.chemical != null and not Global.boss_talking:
 		Global.bad_value += Global.bad_value_map[Global.chemical]
+		if not Global.chemicals.has(Global.chemical):
+			Global.chemicals.append(Global.chemical)
 		Global.did_nothing = false
 		var shift_color = Color.WHITE - Global.color_map[Global.chemical]
 		color_shift += shift_color * 0.25

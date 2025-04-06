@@ -35,6 +35,7 @@ func start_day() -> void:
 	day_timer.start(day_time)
 	Global.bad_value = 0.0
 	Global.did_nothing = true
+	Global.chemicals = []
 
 
 func _on_day_timer_timeout() -> void:

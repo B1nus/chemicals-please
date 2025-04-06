@@ -18,9 +18,9 @@ const texts: Array[Array] = [
 		"GET TO WORK!",
 	],
 	[
-		"Our earnings have went up by 200%",
-		"I don't know why poeple would like the non toxic chemicals more",
-		"Well, get to work!",
+		"Our earnings have went up by 200%.",
+		"Maybe there is something to these non-toxic chemicals.",
+		"Well, no point in hanging around, GET TO WORK!",
 	],
 	[
 		"Had a bit of a disaster yesterday",
@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	if Global.result == null:
 		cur_texts = intro_text
 	else:
-		cur_texts = texts[Global.result - 1]
+		cur_texts = texts[Global.result]
 	if text_id < cur_texts.size():
 		if spray_text:
 			$RichTextLabel.text = "Don't spray me subordinate.".substr(0, text_chars)

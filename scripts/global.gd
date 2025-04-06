@@ -9,6 +9,7 @@ var paper_scene_on: bool = false
 var result = null
 var boss_talking = false
 var boss_hovering = false
+var chemicals = []
 
 
 enum Result {

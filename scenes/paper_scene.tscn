@@ -99,6 +99,19 @@ theme_override_font_sizes/normal_font_size = 11
 text = "Hello"
 fit_content = true
 
+[node name="Content2" type="RichTextLabel" parent="."]
+modulate = Color(0.156779, 0.124527, 0.0694409, 1)
+texture_filter = 1
+layout_mode = 2
+offset_left = 254.0
+offset_top = 256.0
+offset_right = 538.0
+offset_bottom = 297.0
+theme_override_fonts/normal_font = ExtResource("2_rpnwd")
+theme_override_font_sizes/normal_font_size = 11
+text = "Chemicals used:"
+fit_content = true
+
 [node name="TextureButton" parent="." instance=ExtResource("2_uuq48")]
 texture_filter = 1
 layout_mode = 2
