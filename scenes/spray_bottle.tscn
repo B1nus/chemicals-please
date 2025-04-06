@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0pu61plgeknt"]
+[gd_scene load_steps=7 format=3 uid="uid://c0pu61plgeknt"]
 
 [ext_resource type="Shader" uid="uid://bkia0f7aprcom" path="res://scripts/outline.gdshader" id="1_8tg7d"]
 [ext_resource type="Script" uid="uid://chypjcr7jrfho" path="res://scripts/spray_bottle.gd" id="1_eg0il"]
 [ext_resource type="Texture2D" uid="uid://csl22aa7xqr5j" path="res://assets/textures/Black unpressed.png" id="3_8tg7d"]
+[ext_resource type="Texture2D" uid="uid://bpw6p3thn6fu5" path="res://assets/textures/spraybottle_orange.png" id="3_yk2qn"]
 [ext_resource type="Texture2D" uid="uid://gkv0h8mj2imy" path="res://assets/textures/Black pressed.png" id="4_yk2qn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yk2qn"]
 shader = ExtResource("1_8tg7d")
 shader_parameter/color = Color(1, 1, 1, 1)
-shader_parameter/width = 8.0
+shader_parameter/width = 2.0
 shader_parameter/pattern = 1
 shader_parameter/inside = false
 shader_parameter/add_margins = true
@@ -23,8 +24,8 @@ spray_image = ExtResource("4_yk2qn")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 use_parent_material = true
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_yk2qn")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_yk2qn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
