@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://caa2mwo81o1wd"]
+
+[ext_resource type="Texture2D" uid="uid://ddtskfv0f8kgu" path="res://assets/textures/shirtcloud.png" id="1_qq5wq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hohi5"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="Shirtcloud" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+material = SubResource("CanvasItemMaterial_hohi5")
+amount = 16
+texture = ExtResource("1_qq5wq")
+explosiveness = 0.2
+lifetime_randomness = 0.2
+emission_shape = 3
+emission_rect_extents = Vector2(32, 8)
+direction = Vector2(0, -1)
+spread = 60.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 60.0
+anim_speed_min = 0.9
+anim_speed_max = 1.0
