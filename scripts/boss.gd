@@ -38,7 +38,7 @@ const texts: Array[Array] = [
 	],
 	[
 		"Was a bit of a disaster yesterday",
-		"Out chemicals aren't to blame for this.",
+		"Our chemicals aren't to blame for this.",
 		"Don't worry about it",
 		"Just keep spraying those clothes with the chemicals",
 	],
@@ -82,7 +82,7 @@ func next_text() -> void:
 		text_id += 1
 	else:
 		spray_text = false
-	if text_id >= cur_texts.size():
+	if text_id >= cur_texts.size() and Global.boss_talking:
 		$TextureRect2.hide()
 		$RichTextLabel.hide()
 		$"boss-walk".play()
