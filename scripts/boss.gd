@@ -18,7 +18,7 @@ const texts: Array[Array] = [
 		"GET TO WORK!",
 	],
 	[
-		"Our earnings have went up by 200%.",
+		"Our earnings have went up by 200 percent.",
 		"Maybe there is something to these non-toxic chemicals.",
 		"Well, no point in hanging around, GET TO WORK!",
 	],
