@@ -14,11 +14,11 @@ const texts: Array[Array] = [
 	[
 		"Huh, no clothes came out of this factory yesterday.",
 		"Do you happen to know why?",
-		"Maybe somebody wasn't doing their job",
+		"Maybe somebody wasn't doing their job...",
 		"GET TO WORK!",
 	],
 	[
-		"Our earnings have went up by 200 percent.",
+		"Our profits doubled yesterday.",
 		"Maybe there is something to these non-toxic chemicals.",
 		"Well, no point in hanging around, GET TO WORK!",
 	],
@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 		else:
 			$RichTextLabel.text = cur_texts[text_id].substr(0, text_chars)
 	text_chars += 1
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("click") and not Global.hovering_shelf:
 		if hovering and Global.chemical != null:
 			spray_text = true
 			$"boss-cough".play()
@@ -88,7 +88,6 @@ func next_text() -> void:
 		$"boss-walk".play()
 		Global.boss_talking = false
 		start.emit()
-		print("end")
 
 
 var hovering = false

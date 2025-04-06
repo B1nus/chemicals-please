@@ -10,6 +10,8 @@ var result = null
 var boss_talking = false
 var boss_hovering = false
 var chemicals = []
+var spray_count: int = 0
+const spray_min: int = 5
 
 
 enum Result {
@@ -34,7 +36,7 @@ const bad_value_map: Array[float] = [
 
 const particl_map: Array[int] = [
 	0,
-	1,
+	2,
 	0,
 	1,
 	0,

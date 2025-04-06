@@ -33,6 +33,7 @@ func boss_walk() -> void:
 func start_day() -> void:
 	conveyor.speed_up()
 	day_timer.start(day_time)
+	Global.spray_count = 0
 	Global.bad_value = 0.0
 	Global.did_nothing = true
 	Global.chemicals = []
