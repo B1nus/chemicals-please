@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://5eypd3miuis1"]
+[gd_scene load_steps=14 format=3 uid="uid://5eypd3miuis1"]
 
 [ext_resource type="Script" uid="uid://ct3a8d0fo4njq" path="res://scripts/main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qoh5gl78brur" path="res://scenes/conveyor_belt.tscn" id="1_ig7tw"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bxss76xputipd" path="res://scenes/shelf.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ciejhy6in2tk" path="res://scenes/boss.tscn" id="8_tipki"]
 [ext_resource type="AudioStream" uid="uid://b7pie1ba2kxsl" path="res://assets/audio/music.mp3" id="9_85g3d"]
+[ext_resource type="Texture2D" uid="uid://ci45ei5j2j45r" path="res://assets/textures/QL_logo.png" id="10_choun"]
 
 [sub_resource type="Animation" id="Animation_85g3d"]
 length = 0.001
@@ -102,6 +103,10 @@ stream = ExtResource("9_85g3d")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(289, 82)
+texture = ExtResource("10_choun")
 
 [connection signal="timeout" from="DayTimer" to="." method="_on_day_timer_timeout"]
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
