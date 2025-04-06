@@ -3,3 +3,8 @@
 /android/
 *.import
 export_presets.cfg
+linux/
+linux.zip
+index.zip
+export/
+export.zip
