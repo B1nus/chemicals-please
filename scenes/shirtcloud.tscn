@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd2c0vwmc46qt"]
+[gd_scene load_steps=3 format=3 uid="uid://caa2mwo81o1wd"]
 
-[ext_resource type="Texture2D" uid="uid://dpxoacbe28euk" path="res://assets/textures/shirtcloud.png" id="1_qq5wq"]
+[ext_resource type="Texture2D" uid="uid://dgiv30xim58q0" path="res://assets/textures/shirtcloud_2.png" id="1_qq5wq"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hohi5"]
 particles_animation = true
@@ -14,18 +14,16 @@ particles_anim_loop = false
 texture_filter = 1
 texture_repeat = 1
 material = SubResource("CanvasItemMaterial_hohi5")
-emitting = false
-amount = 16
+amount = 24
 texture = ExtResource("1_qq5wq")
-one_shot = true
-explosiveness = 0.2
+explosiveness = 0.14
 lifetime_randomness = 0.2
 emission_shape = 3
 emission_rect_extents = Vector2(32, 8)
 direction = Vector2(0, -1)
-spread = 60.0
-gravity = Vector2(0, 0)
-initial_velocity_min = 40.0
-initial_velocity_max = 60.0
+spread = 32.73
+gravity = Vector2(0, 98)
+initial_velocity_min = 60.0
+initial_velocity_max = 130.4
 anim_speed_min = 0.9
 anim_speed_max = 1.0
