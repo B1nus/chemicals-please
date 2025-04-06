@@ -41,6 +41,8 @@ func translate_child(child: Node2D, delta: float) -> void:
 	child.global_position.x += velocity * delta
 	if child.global_position.x > end_point.global_position.x:
 		child.queue_free()
+	elif not child is Clothes and not child.get_child(0).emitting:
+		child.queue_free()
 
 
 func speed_up() -> void:
@@ -53,6 +55,9 @@ func slow_down() -> void:
 
 func clear_clothes() -> void:
 	for child in clothes_parent.get_children():
-		child.clean()
+		if child is Clothes:
+			child.clean()
+		elif not child.get_child(0).emitting:
+			child.queue_free()
 		if child.global_position.x > clothes_gap:
 			child.queue_free()

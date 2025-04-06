@@ -5,7 +5,13 @@ extends Control
 signal restart
 var on: bool = false
 
-
+var images: Array[Texture] = [
+	load("res://assets/textures/newspaper_happy.png"),
+	load("res://assets/textures/newspaper_happy.png"),
+	load("res://assets/textures/newspaper_disease.png"),
+	load("res://assets/textures/newspaper_disease.png"),
+	load("res://assets/textures/newspaper_disease.png"),
+]
 const nothing_text = [
 	"Excessive nudity in the city!",
 	"Police arrested hundreds of people who were wandering around the city without clothes, as there were no clothes in the shops in the morning and they already threw out yesterday's set."
@@ -46,11 +52,14 @@ func fade() -> void:
 	print(Global.did_nothing, Global.bad_value)
 	var id = min(ceil(Global.bad_value), texts.size() - 1)
 	if Global.did_nothing:
+		Global.result = Global.Result.NOTHING
 		$Header.text = nothing_text[0]
 		$Content.text = nothing_text[1]
 	else:
+		Global.result = Global.Result.GOOD + id
 		$Header.text = texts[id][0]
 		$Content.text = texts[id][1]
+	$TextureRect.texture = images[Global.result]
 	show()
 
 

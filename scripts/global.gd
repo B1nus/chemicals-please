@@ -6,6 +6,18 @@ var chemical = null
 var did_nothing: bool = true
 var bad_value: float = 0.0
 var paper_scene_on: bool = false
+var result = null
+var boss_talking = false
+var boss_hovering = false
+
+
+enum Result {
+	NOTHING,
+	GOOD,
+	ALMOST_GOOD,
+	BAD,
+	REALLY_BAD,
+}
 
 
 const bad_value_map: Array[float] = [

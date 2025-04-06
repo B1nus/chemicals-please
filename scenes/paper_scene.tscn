@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://esp3sh2kg77s"]
+[gd_scene load_steps=9 format=3 uid="uid://esp3sh2kg77s"]
 
 [ext_resource type="Script" uid="uid://fynfvi5mmk8t" path="res://scripts/paper_scene.gd" id="1_1g4or"]
 [ext_resource type="Texture2D" uid="uid://dr5h4ujte05a4" path="res://assets/textures/Background Empty.PNG" id="1_ya0lg"]
 [ext_resource type="FontFile" uid="uid://bhww5xieogvy" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="2_rpnwd"]
 [ext_resource type="PackedScene" uid="uid://c78dbrwfc2igx" path="res://scenes/button.tscn" id="2_uuq48"]
+[ext_resource type="Texture2D" uid="uid://dy6rvwq62hp68" path="res://assets/textures/newspaper_happy.png" id="5_scocm"]
 
 [sub_resource type="Animation" id="Animation_1g4or"]
 length = 0.001
@@ -17,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_7g22y"]
@@ -29,7 +30,7 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 1),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -42,6 +43,7 @@ _data = {
 }
 
 [node name="PaperScene" type="TextureRect"]
+modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,13 +87,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Content" type="RichTextLabel" parent="."]
-modulate = Color(0.317527, 0.261528, 0.166017, 1)
+modulate = Color(0.156779, 0.124527, 0.0694409, 1)
 texture_filter = 1
 layout_mode = 2
-offset_left = 242.0
-offset_top = 168.0
-offset_right = 542.0
-offset_bottom = 304.0
+offset_left = 254.0
+offset_top = 175.0
+offset_right = 538.0
+offset_bottom = 297.0
 theme_override_fonts/normal_font = ExtResource("2_rpnwd")
 theme_override_font_sizes/normal_font_size = 11
 text = "Hello"
@@ -109,6 +111,15 @@ offset_left = 482.0
 offset_top = 252.0
 offset_right = 546.0
 offset_bottom = 316.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 171.0
+offset_right = 248.0
+offset_bottom = 304.0
+texture = ExtResource("5_scocm")
+expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
