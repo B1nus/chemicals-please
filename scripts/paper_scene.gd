@@ -12,8 +12,8 @@ const nothing_text = [
 ]
 const texts = [
 	[
-		"Newspaper is out of business",
-		"As we have nothing to report and life is super boring we decided to close down our newspaper.",
+		"All is well",
+		"People are very happy with their t-shirts from QL Clothes! 'I just love QL Clothes' says citizen.",
 	],
 	[
 		"Disease sighted!",
@@ -21,7 +21,7 @@ const texts = [
 	],
 	[
 		"Tenctacles instead of arms!",
-		"Some people grew tentacles instead of arms. Police suspects Ql Clothes factory, they are denying any wrongdoing!",
+		"Some people have started to grow tentacles instead of arms. Police suspects Ql Clothes factory, they are denying any wrongdoing!",
 	],
 	[
 		"Aliens are walking among us!",
