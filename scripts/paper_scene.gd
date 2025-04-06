@@ -50,7 +50,7 @@ func fade() -> void:
 	$AnimationPlayer.play("fade")
 	on = true
 	print(Global.did_nothing, Global.bad_value)
-	var id = min(round(Global.bad_value), texts.size() - 1)
+	var id = min(ceil(Global.bad_value), texts.size() - 1)
 	if Global.did_nothing:
 		Global.result = Global.Result.NOTHING
 		$Header.text = nothing_text[0]

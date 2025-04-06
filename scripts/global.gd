@@ -26,7 +26,7 @@ enum Result {
 const bad_value_map: Array[float] = [
 	0.05,
 	0.0,
-	0.2,
+	0.1,
 	0.2,
 	0.2,
 	0.3,
@@ -39,7 +39,7 @@ const particl_map: Array[int] = [
 	2,
 	0,
 	1,
-	0,
+	1,
 	1,
 	0
 ]
