@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyid7drgagteq"]
+[gd_scene load_steps=3 format=3 uid="uid://dlir18p3d3nkn"]
 
-[ext_resource type="Texture2D" uid="uid://ddtskfv0f8kgu" path="res://assets/textures/shirtcloud.png" id="1_ife83"]
+[ext_resource type="Texture2D" uid="uid://dpxoacbe28euk" path="res://assets/textures/shirtcloud.png" id="1_ife83"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hohi5"]
 particles_animation = true

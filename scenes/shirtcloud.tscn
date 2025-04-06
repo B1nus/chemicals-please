@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://caa2mwo81o1wd"]
+[gd_scene load_steps=3 format=3 uid="uid://cd2c0vwmc46qt"]
 
-[ext_resource type="Texture2D" uid="uid://dgiv30xim58q0" path="res://assets/textures/shirtcloud_2.png" id="1_qq5wq"]
+[ext_resource type="Texture2D" uid="uid://dic8vt4x1cwcu" path="res://assets/textures/shirtcloud_2.png" id="1_qq5wq"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hohi5"]
 particles_animation = true
@@ -8,7 +8,7 @@ particles_anim_h_frames = 4
 particles_anim_v_frames = 4
 particles_anim_loop = false
 
-[node name="Shirtcloud" type="Node2D"]
+[node name="Shirtcloud2" type="Node2D"]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 texture_filter = 1

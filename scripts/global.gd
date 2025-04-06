@@ -32,6 +32,17 @@ const bad_value_map: Array[float] = [
 ]
 
 
+const particl_map: Array[int] = [
+	0,
+	1,
+	0,
+	1,
+	0,
+	1,
+	0
+]
+
+
 const color_map: Array[Color] = [
 	Color.BLACK,
 	Color.BLUE,

@@ -5,7 +5,10 @@ extends Node2D
 @export var click_distance: float = 80
 @export var click_offset: Vector2 = Vector2(-60, -5)
 @export var curve: Curve
-@onready var shirt_cloud: PackedScene = load("res://scenes/shirtcloud.tscn")
+@onready var shirt_clouds: Array[PackedScene] = [
+	load("res://scenes/shirtcloud.tscn"),
+	load("res://scenes/shirtcloud_2.tscn"),
+]
 var color_shift: Color = Color.BLACK
 
 var textures: Array[Texture] = [
@@ -37,8 +40,9 @@ func _process(delta: float) -> void:
 		modulate.g = 1.0 - curve.sample(color_shift.g)
 		modulate.b = 1.0 - curve.sample(color_shift.b)
 		
-		var new_shirt_cloud = shirt_cloud.instantiate()
+		var new_shirt_cloud = shirt_clouds[Global.particl_map[Global.chemical]].instantiate()
 		new_shirt_cloud.get_child(0).modulate = Global.color_map[Global.chemical]
 		new_shirt_cloud.get_child(0).emitting = true
+		new_shirt_cloud.get_child(0).one_shot = true
 		get_parent().add_child(new_shirt_cloud)
 		new_shirt_cloud.global_position = global_position

@@ -88,6 +88,7 @@ func next_text() -> void:
 		$"boss-walk".play()
 		Global.boss_talking = false
 		start.emit()
+		print("end")
 
 
 var hovering = false
