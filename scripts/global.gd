@@ -8,19 +8,34 @@ var bad_value: float = 0.0
 var paper_scene_on: bool = false
 
 
-const bad_value_map: Dictionary[Chemical, float] = {
-	Chemical.PFAS: 0.1,
-	Chemical.BEEWAX: 0.0,
-}
+const bad_value_map: Array[float] = [
+	0.05,
+	0.0,
+	1.0,
+	0.2,
+	5.0,
+	0.5,
+	0.1,
+]
 
 
-const color_shift_map: Dictionary[Chemical, Vector3] = {
-	Chemical.PFAS: Vector3(0.1,0,0),
-	Chemical.BEEWAX: Vector3(0,0.05,0.05),
-}
+const color_shift_map: Array[Vector3] = [
+	Vector3(0.1,0,0),
+	Vector3(0,0.05,0.05),
+	Vector3(0.1, 0.1, 0.1),
+	Vector3(0.1, 0.1, 0.1),
+	Vector3(0.1, 0.1, 0.1),
+	Vector3(0.1, 0.1, 0.1),
+	Vector3(0.1, 0.1, 0.1),
+]
 
 
 enum Chemical {
-	PFAS,
-	BEEWAX,
+	BLACK,
+	BLUE,
+	BROWN,
+	GREEN,
+	ORANGE,
+	RED,
+	YELLOW,
 }

@@ -4,7 +4,7 @@ extends Node2D
 
 const texts: Array[String] = [
 	"Ahh, you're new here.",
-	"Welcome to Ethical Corp.",
+	"Welcome to QL Clothes.",
 	"Just spray the clothes with the chemicals",
 	"Are the chemicals bad? Of course not",
 	"We at Ethical Corp only use the bestest of chemicals",
@@ -35,4 +35,5 @@ func next_text() -> void:
 	if text_id >= texts.size():
 		$TextureRect2.hide()
 		$RichTextLabel.hide()
+		$"boss-walk".play()
 		start.emit()

@@ -1,5 +1,5 @@
 class_name PaperScene
-extends ColorRect
+extends Control
 
 
 signal restart
@@ -46,11 +46,11 @@ func fade() -> void:
 	print(Global.did_nothing, Global.bad_value)
 	var id = min(ceil(Global.bad_value), texts.size() - 1)
 	if Global.did_nothing:
-		$VBoxContainer/Header.text = nothing_text[0]
-		$VBoxContainer/Content.text = nothing_text[1]
+		$Header.text = nothing_text[0]
+		$Content.text = nothing_text[1]
 	else:
-		$VBoxContainer/Header.text = texts[id][0]
-		$VBoxContainer/Content.text = texts[id][1]
+		$Header.text = texts[id][0]
+		$Content.text = texts[id][1]
 	show()
 
 
@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 	Global.paper_scene_on = on
 	if on:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	$VBoxContainer/TextureButton.disabled = not on
+	$TextureButton.disabled = not on
 
 
 func _on_texture_button_pressed() -> void:

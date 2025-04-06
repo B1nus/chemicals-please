@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxss76xputipd"]
+[gd_scene load_steps=9 format=3 uid="uid://bxss76xputipd"]
 
 [ext_resource type="Script" uid="uid://c17s6fi10bqm8" path="res://scripts/shelf.gd" id="1_00mi8"]
 [ext_resource type="Texture2D" uid="uid://dewijpyuo86hs" path="res://assets/textures/shelf.png" id="2_00mi8"]
 [ext_resource type="PackedScene" uid="uid://c0pu61plgeknt" path="res://scenes/spray_bottle.tscn" id="2_xj574"]
+[ext_resource type="Texture2D" uid="uid://deorblv5odso6" path="res://assets/textures/Blue unpressed.png" id="4_7q781"]
+[ext_resource type="Texture2D" uid="uid://dk4oxof3ccnae" path="res://assets/textures/Blue pressed.png" id="5_tw82s"]
+[ext_resource type="Texture2D" uid="uid://dk2jx4oxj78ks" path="res://assets/textures/Brown unpressed.png" id="6_oyalq"]
+[ext_resource type="Texture2D" uid="uid://6negj45uv3ir" path="res://assets/textures/Brown pressed.png" id="7_jrn4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viw0s"]
 size = Vector2(171, 182)
@@ -14,16 +18,36 @@ script = ExtResource("1_00mi8")
 texture = ExtResource("2_00mi8")
 
 [node name="SprayBottle" parent="." instance=ExtResource("2_xj574")]
-position = Vector2(-14, -115)
+position = Vector2(-36, -108)
 
 [node name="SprayBottle2" parent="." instance=ExtResource("2_xj574")]
-position = Vector2(-54, -115)
+position = Vector2(-64, -108)
+chemical = 1
+idle_image = ExtResource("4_7q781")
+spray_image = ExtResource("5_tw82s")
+
+[node name="SprayBottle3" parent="." instance=ExtResource("2_xj574")]
+position = Vector2(-64, -108)
+chemical = 1
+idle_image = ExtResource("6_oyalq")
+spray_image = ExtResource("7_jrn4c")
+
+[node name="SprayBottle4" parent="." instance=ExtResource("2_xj574")]
+position = Vector2(-64, -108)
+chemical = 1
+
+[node name="SprayBottle5" parent="." instance=ExtResource("2_xj574")]
+position = Vector2(-64, -108)
+chemical = 1
+
+[node name="SprayBottle6" parent="." instance=ExtResource("2_xj574")]
+position = Vector2(-64, -108)
 chemical = 1
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, -50)
+position = Vector2(1, -49)
 shape = SubResource("RectangleShape2D_viw0s")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

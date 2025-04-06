@@ -16,6 +16,7 @@ script = ExtResource("1_0h03n")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_a5ji5")
+scale = Vector2(2, 2)
 emitting = false
 amount = 32
 texture = ExtResource("1_64843")
@@ -31,6 +32,7 @@ gravity = Vector2(0, 0)
 initial_velocity_min = 40.0
 initial_velocity_max = 250.0
 damping_max = 0.1
+scale_amount_max = 2.0
 anim_speed_min = 0.8
 anim_speed_max = 1.2
 anim_offset_min = 0.1

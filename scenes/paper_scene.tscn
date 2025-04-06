@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://esp3sh2kg77s"]
+[gd_scene load_steps=8 format=3 uid="uid://esp3sh2kg77s"]
 
 [ext_resource type="Script" uid="uid://fynfvi5mmk8t" path="res://scripts/paper_scene.gd" id="1_1g4or"]
+[ext_resource type="Texture2D" uid="uid://dr5h4ujte05a4" path="res://assets/textures/Background Empty.PNG" id="1_ya0lg"]
 [ext_resource type="FontFile" uid="uid://bhww5xieogvy" path="res://assets/font/MegamaxJonathanToo-YqOq2.ttf" id="2_rpnwd"]
 [ext_resource type="PackedScene" uid="uid://c78dbrwfc2igx" path="res://scenes/button.tscn" id="2_uuq48"]
 
@@ -9,26 +10,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_7g22y"]
@@ -36,26 +25,14 @@ resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.0333333, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("VBoxContainer:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c28eh"]
@@ -64,58 +41,75 @@ _data = {
 &"fade": SubResource("Animation_7g22y")
 }
 
-[node name="PaperScene" type="ColorRect"]
+[node name="PaperScene" type="TextureRect"]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 0)
+texture = ExtResource("1_ya0lg")
 script = ExtResource("1_1g4or")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-modulate = Color(0, 0, 0, 0)
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -65.0
-offset_right = 100.0
-offset_bottom = 65.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="Header" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Header2" type="RichTextLabel" parent="."]
+modulate = Color(0.26467, 0.166225, 0.0683703, 1)
 texture_filter = 1
 layout_mode = 2
+offset_left = 39.0
+offset_top = 55.0
+offset_right = 526.0
+offset_bottom = 89.0
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_rpnwd")
+theme_override_font_sizes/normal_font_size = 33
+text = "CITY NEWS"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Header" type="RichTextLabel" parent="."]
+modulate = Color(0.111197, 0.111197, 0.111197, 1)
+texture_filter = 1
+layout_mode = 2
+offset_left = 39.0
+offset_top = 140.0
+offset_right = 546.0
+offset_bottom = 169.0
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_rpnwd")
 theme_override_font_sizes/normal_font_size = 22
 text = "Hello"
 fit_content = true
-horizontal_alignment = 1
 
-[node name="Content" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Content" type="RichTextLabel" parent="."]
+modulate = Color(0.317527, 0.261528, 0.166017, 1)
 texture_filter = 1
 layout_mode = 2
+offset_left = 242.0
+offset_top = 168.0
+offset_right = 542.0
+offset_bottom = 304.0
 theme_override_fonts/normal_font = ExtResource("2_rpnwd")
 theme_override_font_sizes/normal_font_size = 11
 text = "Hello"
 fit_content = true
 
-[node name="TextureButton" parent="VBoxContainer" instance=ExtResource("2_uuq48")]
+[node name="TextureButton" parent="." instance=ExtResource("2_uuq48")]
 texture_filter = 1
 layout_mode = 2
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 482.0
+offset_top = 252.0
+offset_right = 546.0
+offset_bottom = 316.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_c28eh")
 }
 
-[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
