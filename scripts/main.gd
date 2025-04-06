@@ -42,7 +42,7 @@ func _on_wait_timer_timeout() -> void:
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if boss.text_id == -1:
+	if boss.text_id < boss.texts.size():
 		boss.next_text()
 	else:
 		boss.queue_free()

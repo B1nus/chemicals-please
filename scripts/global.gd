@@ -19,14 +19,14 @@ const bad_value_map: Array[float] = [
 ]
 
 
-const color_shift_map: Array[Vector3] = [
-	Vector3(0.1,0,0),
-	Vector3(0,0.05,0.05),
-	Vector3(0.1, 0.1, 0.1),
-	Vector3(0.1, 0.1, 0.1),
-	Vector3(0.1, 0.1, 0.1),
-	Vector3(0.1, 0.1, 0.1),
-	Vector3(0.1, 0.1, 0.1),
+const color_map: Array[Color] = [
+	Color.BLACK,
+	Color.BLUE,
+	Color.BROWN,
+	Color.GREEN,
+	Color.ORANGE,
+	Color.RED,
+	Color.YELLOW,
 ]
 
 

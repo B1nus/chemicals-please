@@ -14,6 +14,7 @@ particles_anim_loop = false
 script = ExtResource("1_0h03n")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0, 0, 0, 1)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_a5ji5")
 scale = Vector2(2, 2)

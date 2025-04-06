@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxss76xputipd"]
+[gd_scene load_steps=16 format=3 uid="uid://bxss76xputipd"]
 
 [ext_resource type="Script" uid="uid://c17s6fi10bqm8" path="res://scripts/shelf.gd" id="1_00mi8"]
 [ext_resource type="Texture2D" uid="uid://dewijpyuo86hs" path="res://assets/textures/shelf.png" id="2_00mi8"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bpw6p3thn6fu5" path="res://assets/textures/spraybottle_orange.png" id="10_nl3ju"]
 [ext_resource type="Texture2D" uid="uid://dwe6kdhh1dqmr" path="res://assets/textures/Black pressed1.png" id="11_7omqp"]
 [ext_resource type="Texture2D" uid="uid://n4fttche0lad" path="res://assets/textures/Black pressed2.png" id="12_h1dwa"]
+[ext_resource type="Texture2D" uid="uid://b8ahmnydgyyq4" path="res://assets/textures/red-unpressed.png" id="13_pb500"]
+[ext_resource type="Texture2D" uid="uid://dojx0srdyluab" path="res://assets/textures/red-pressed.png" id="14_4qg5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viw0s"]
 size = Vector2(171, 182)
@@ -23,7 +25,7 @@ script = ExtResource("1_00mi8")
 texture = ExtResource("2_00mi8")
 
 [node name="SprayBottle3" parent="." instance=ExtResource("2_xj574")]
-position = Vector2(31, -47)
+position = Vector2(57, -47)
 chemical = 2
 idle_image = ExtResource("4_nl3ju")
 spray_image = ExtResource("5_rm377")
@@ -35,7 +37,7 @@ idle_image = ExtResource("6_nl3ju")
 spray_image = ExtResource("7_rm377")
 
 [node name="SprayBottle6" parent="." instance=ExtResource("2_xj574")]
-position = Vector2(-17, -48)
+position = Vector2(-3, -46)
 chemical = 4
 idle_image = ExtResource("8_nl3ju")
 spray_image = ExtResource("9_rm377")
@@ -47,10 +49,16 @@ idle_image = ExtResource("10_nl3ju")
 spray_image = ExtResource("10_nl3ju")
 
 [node name="SprayBottle2" parent="." instance=ExtResource("2_xj574")]
-position = Vector2(-21, -104)
+position = Vector2(-11, -104)
 chemical = 1
 idle_image = ExtResource("11_7omqp")
 spray_image = ExtResource("12_h1dwa")
+
+[node name="SprayBottle4" parent="." instance=ExtResource("2_xj574")]
+position = Vector2(55, -104)
+chemical = 5
+idle_image = ExtResource("13_pb500")
+spray_image = ExtResource("14_4qg5k")
 
 [node name="Area2D" type="Area2D" parent="."]
 
